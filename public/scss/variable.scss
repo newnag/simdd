@@ -1,0 +1,26 @@
+// color
+$darkblue: #0D0D2F;
+$sky: #00ADEF;
+$white: #fff;
+$black: #000;
+$gray: #C4C4C4;
+$purple: #7437f7;
+$dark-purple: #535377;
+$yellow: #FFB300;
+
+// display size
+$sm: 600px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+$wide: 1900px;
+
+// @function
+@mixin fontsize($size) {
+  font-size: $size;
+
+  @media screen and (max-width:($md)-1px){
+    font-size: $size - 0.2em;
+  }
+}

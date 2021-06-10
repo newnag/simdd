@@ -1,0 +1,137 @@
+.homepage .banner .swiper-wrapper .swiper-slide figure img {
+  max-width: 100%;
+  max-height: 550px;
+}
+
+.homepage .search-zone {
+  background: #0D0D2F;
+  border-radius: 10px;
+  width: 65%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: .5em 1em;
+}
+
+.homepage .search-zone .search-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.homepage .search-zone .search-head .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 100%;
+  padding-left: 1em;
+}
+
+.homepage .search-zone .search-head .left p {
+  color: #C4C4C4;
+  margin-right: 2em;
+  cursor: pointer;
+  padding: .25em 0;
+}
+
+.homepage .search-zone .search-head .left p.active {
+  color: #00ADEF;
+  border-bottom: 2px solid #00ADEF;
+}
+
+.homepage .search-zone .search-head .left p .number {
+  color: #fff;
+  background: #00ADEF;
+  border-radius: 20px;
+  font-size: .8em;
+  padding: 0 1em;
+}
+
+.homepage .search-zone .search-head .right .manual {
+  color: #C4C4C4;
+  cursor: pointer;
+}
+
+.homepage .search-zone .search-box {
+  padding: 1em;
+}
+
+.homepage .search-zone .search-box .box-border {
+  border-bottom: 1px solid #C4C4C4;
+  padding: 1em 0;
+}
+
+.homepage .search-zone .search-box .ber-interest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homepage .search-zone .search-box .ber-interest .left p {
+  color: #fff;
+}
+
+.homepage .search-zone .search-box .ber-interest .left p.blue {
+  color: #00ADEF;
+}
+
+.homepage .search-zone .search-box .ber-interest .left p.yellow {
+  color: #FFB300;
+}
+
+.homepage .search-zone .search-box .ber-interest .left p.sub {
+  font-size: .6em;
+  color: #C4C4C4;
+  margin-left: 2em;
+}
+
+.homepage .search-zone .search-box .ber-interest .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homepage .search-zone .search-box .ber-interest .right .input-ber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homepage .search-zone .search-box .ber-interest .right .input-ber .num {
+  width: 2em;
+  height: 35px;
+  border: unset;
+  text-align: center;
+  margin: 0 .25em;
+}
+
+.homepage .search-zone .search-box .ber-interest .right .input-ber .keed {
+  width: 10px;
+  height: 2px;
+  background: #C4C4C4;
+}
+
+.homepage .search-zone .search-box .ber-interest .right .random-ber {
+  margin-left: 1em;
+}
+/*# sourceMappingURL=home.css.map */

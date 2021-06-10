@@ -1,0 +1,123 @@
+@import 'variable';
+
+.homepage{
+  .banner{
+    .swiper-wrapper{
+      .swiper-slide{
+        figure{
+          img{
+            max-width: 100%;
+            max-height: 550px;
+          }
+        }
+      }
+    }
+  }
+
+  .search-zone{
+    background: $darkblue;
+    border-radius: 10px;
+    width: 65%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: .5em 1em;
+
+    .search-head{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $gray;
+
+      .left{
+        display: flex;
+        align-self: center;
+        height: 100%;
+        padding-left: 1em;
+
+        p{
+          color: $gray;
+          margin-right: 2em;
+          cursor: pointer;
+          padding: .25em 0;
+
+          &.active{
+            color: $sky;
+            border-bottom: 2px solid $sky;
+          }
+
+          .number{
+            color: $white;
+            background: $sky;
+            border-radius: 20px;
+            font-size: .8em;
+            padding: 0 1em;
+          }
+        }
+      }
+
+      .right{
+        
+        .manual{
+          color: $gray;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .search-box{
+      padding: 1em;
+
+      .box-border{
+        border-bottom: 1px solid $gray;
+        padding: 1em 0;
+      }
+      .ber-interest{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left{
+          p{
+            color: $white;
+
+            &.blue{color: $sky;}
+            &.yellow{color: $yellow;}
+            &.sub{
+              font-size: .6em;
+              color: $gray;
+              margin-left: 2em;
+            }
+          }
+        }
+
+        .right{
+          display: flex;
+          align-items: center;
+
+          .input-ber{
+            display: flex;
+            align-items: center;
+
+            .num{
+              width: 2em;
+              height: 35px;
+              border: unset;
+              text-align: center;
+              margin: 0 .25em;
+            }
+
+            .keed{
+              width: 10px;
+              height: 2px;
+              background: $gray;
+            }
+          }
+
+          .random-ber{
+            margin-left: 1em;
+          }
+        }
+      }
+    }
+  }
+}

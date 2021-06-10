@@ -1,0 +1,33 @@
+Simdd
+
+Font : prompt
+Font-size : 15px
+
+regula : 400
+medium: 600
+semi-bold: 600
+bold: 700
+
+////////////////////////////////////
+//## color
+
+darkblue: #0D0D2F
+sky: #00ADEF
+white: #fff
+black: #000
+gray: #C4C4C4
+dark-pueple: #535377
+yellow: #FFB300
+
+gradient(#00ADEF,#8725F8)
+
+////////////////////////////////////
+//## size
+
+header{
+  height:51px
+}
+
+slide{
+  height:550px
+}
