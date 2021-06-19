@@ -87,7 +87,7 @@ a {
 }
 
 input {
-  border: 1px solid inherit;
+  border: unset;
   border-radius: 5px;
   color: #fff;
   background: #535377;
@@ -100,6 +100,10 @@ input:focus {
   border: 1px solid #fff !important;
 }
 
+input:focus-visible {
+  outline: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -108,6 +112,19 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+select {
+  width: 100%;
+  height: 35px;
+  background: #535377;
+  color: #fff;
+  border: unset;
+  border-radius: 5px;
+}
+
+select:focus-visible {
+  outline: none;
 }
 
 button {
@@ -151,9 +168,51 @@ button:focus {
   background: linear-gradient(#00ADEF, #7437f7);
 }
 
+.form-component.button {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
 .form-component.button.bg {
   background: -webkit-gradient(linear, left top, right top, from(#00ADEF), to(#7437f7));
   background: linear-gradient(to right, #00ADEF, #7437f7);
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .form-component.button.bg:hover {
+    background: #fff;
+    color: #00ADEF;
+    border: 1px solid #7437f7;
+  }
+}
+
+.form-component.button.gray {
+  background: #535377;
+  color: #fff;
+}
+
+.form-component.select {
+  padding: 5px 20px 5px 10px;
+}
+
+.form-component.input {
+  padding: 5px 20px 5px 10px;
+}
+
+.form-component.input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form-component.input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-component.input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-component.input::placeholder {
   color: #fff;
 }
 
@@ -496,7 +555,7 @@ header .header .marqee marquee {
   }
   header .header nav .other-menu .other-listmenu .menu {
     color: #fff;
-    padding: .5em;
+    padding: .25em .5em;
   }
 }
 
