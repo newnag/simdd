@@ -894,4 +894,370 @@
   .bitber{
     margin-top: 4em;
   }
+
+  .article{
+    @media screen and (min-width:$xl){
+      position: relative;
+      padding: 3em 0;
+    }
+
+    h2{
+      text-align: center;
+      color: $white;
+    }
+
+    .article-slide{
+      padding: 0 6em;
+      margin: 3em auto;
+
+      .swiper-wrapper{
+        .swiper-slide{
+
+          a{
+            .box{
+              width: 270px;
+              height: 433px;
+              display: inline-block;
+
+              figure{
+                display: flex;
+
+                img{
+                  width: 270px;
+                  height: 270px;
+                  object-fit: cover;
+                  border-radius: 0 0 3px 3px;
+                }
+              }
+
+              .detail{
+                background: $white;
+                height: 163px;
+                border-radius: 0 0 3px 3px;
+
+                .menu-bar{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 0 1em;
+                  padding-top: .25em;
+
+                  .left{
+                    display: flex;
+                    align-items: center;
+
+                    .like,.share{
+                      margin-right: 10px;
+
+                      i{
+                        color: $gray;
+                      }
+                    }
+                  }
+                  .right{
+                    .date{
+                      color: $gray;
+                      font-size: .9em;
+                      font-weight: 300;
+                    }
+                  }
+                }
+
+                .name{
+                  margin: .5em 0;
+                  padding: 0 1em;
+                  display: flex;
+                  align-items: center;
+
+                  figure{
+                    display: flex;
+                    margin-right: 10px;
+
+                    img{
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 50%;
+                      object-fit: cover;
+                    }
+                  }
+                }
+
+                .title{
+                  padding: 0 1em;
+
+                  h3{
+                    font-size: 1em;
+                    font-weight: 500;
+                    overflow: hidden;
+                    height: 1.4em;
+                  }
+                }
+
+                .desc{
+                  padding: 0 1.2em;
+                  font-size: .8em;
+                  margin-top: .5em;
+                  height: 4.4em;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-button-next{
+        right: 20px;
+      }
+      .swiper-button-prev{
+        left: 30px;
+
+        &:after{
+          left: -30px;
+          position: absolute;
+        }
+      }
+    }
+
+    .button-all-article{
+      text-align: center;
+      margin: 2em 0;
+    }
+
+    >.bg{
+      display: none;
+
+      @media screen and (min-width:$xl){
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .package{
+    margin: 3em auto;
+
+    .head{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $darkblue;
+      padding: 5px 15px;
+      border-radius: 3px;
+
+      .title{
+        display: flex;
+        align-items: baseline;
+
+        h2{
+          color: $white;
+        }
+      }
+
+    }
+
+    .select-brand{
+      margin: 2em 0;
+      display: grid;
+      grid-template-columns: repeat(9,1fr);
+      grid-column-gap: 1em;
+      grid-row-gap: 1em;
+      padding: 0 8em;
+      padding-bottom: 3em;
+      border-bottom: 2px dashed $gray;
+
+      .item{
+        @media (hover:hover){
+          &:hover{
+            figure{
+              img{
+                transform: scale(1.2);
+              }
+            }
+
+            button{
+              background: $sky;
+              color: $white;
+            }
+          }
+        }
+
+        figure{
+          display: flex;
+          justify-content: center;
+          margin-bottom: .5em;
+          overflow: hidden;
+
+          img{
+            width: 61px;
+            height: 32px;
+            transition: .3s ease-in-out;
+          }
+        }
+        button{
+          width: 100%;
+          background: $white;
+          border: 1px solid $sky;
+          border-radius: 5px;
+          color: $sky;
+  
+          &.active{
+            background: linear-gradient($sky,$purple);
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .select-type-package{
+      p{
+        text-align: center;
+      }
+
+      .select{
+        margin: 2em auto;
+        position: relative;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid $sky;
+        border-radius: 10px;
+
+        .select-button{
+          width: 100px;
+          padding: 5px;
+          text-align: center;
+          cursor: pointer;
+          color: $sky;
+          transition: .3s ease-in-out;
+
+          &.active{
+            color: $white;
+          }
+        }
+
+        >.bg{
+          background: linear-gradient(to right,$sky,$purple);
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 50%;
+          height: 100%;
+          z-index: -1;
+          border-radius: 8px;
+          transition: .3s ease-in-out;
+
+          &.left{
+            right: 50%;
+          }
+        }
+      }
+    }
+
+    .name-package{
+      text-align: center;
+
+      p{
+        font-size: 1.4em;
+        font-weight: 500;
+      }
+    }
+
+    .package-slide{
+      margin: 2em 0;
+
+      .swiper-wrapper{
+        padding: 0 6em;
+
+        .swiper-slide{
+          width: 300px!important;
+
+          .box{
+            width: 300px;
+            height: 510px;
+            position: relative;
+            border: 1px solid $gray;
+            border-radius: 5px;
+
+            .title{
+              height: 87px;
+              background: $sky;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              border-radius: 5px 5px 0 0;
+
+              p{
+                text-align: center;
+                color: $white;
+              }
+            }
+
+            .detail{
+              height: calc(510px - 87px);
+              padding: 1em;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+
+              .price{
+                text-align: center;
+
+                span{
+                  &:first-child{
+                    font-size: 2em;
+                  }
+                  &:last-child{
+                    font-size: .8em;
+                    color: $gray;
+                  }
+                }
+              }
+
+              .content{
+                text-align: center;
+              }
+
+              .button{
+                width: 120px;
+              }
+            }
+
+            >.bg{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+            }
+          }
+        }
+      }
+
+      .swiper-button-next{
+        right: 20px;
+      }
+      .swiper-button-prev{
+        left: 30px;
+
+        &:after{
+          position: absolute;
+          left: -20px;
+        }
+      }
+    }
+  }
 }

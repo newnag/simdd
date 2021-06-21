@@ -40,3 +40,25 @@ img shop{
 logoเครือข่าย
 width: 61px
 height: 32px
+
+article{
+  box{
+    width: 270px
+    height: 433px
+
+    img{
+      width: 270px
+      height: 270px
+    }
+  }
+}
+
+box-package{
+  width: 300px
+  height: 510px
+
+  title{
+    height: 87px
+    width: 100%
+  }
+}
