@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// หน้าหลัก
 Route::get('/', function () {
     return view('pages.home');
 });
+// หน้ารวมเบอร์
+Route::get('/allber', function () {
+    return view('pages.allber');
+});
+// หน้ารวมประมูลเบอร์
+Route::get('/allbit', function () {
+    return view('pages.allbit');
+});
+

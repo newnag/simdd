@@ -25,7 +25,7 @@
           <div class="manual">คู่มือการใช้งานค้นหาเบอร์ <i class="fas fa-book"></i></div>
         </div>
       </div>
-      <div class="search-box">
+      <div class="search-box hidden">
         <div class="ber-interest box-border">
           <div class="left">
             <p><i class="fas fa-sim-card"></i> ค้นหาเบอร์ที่คุณสนใจ</p>
@@ -170,6 +170,85 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="bermean hidden">
+        <div class="select-mean">
+          @for ($i = 0; $i < 5; $i++)
+            <div class="item">
+              <figure><img src="{{asset('img/awesome-bitcoin.png')}}" alt=""></figure>
+              <p>เบอร์มังกร,หงส์,เบอร์กวนอู</p>
+              <div class="delete"><i class="fas fa-times-circle"></i></div>
+              <div class="palm">
+                <img src="{{asset('img/leaf.png')}}" class="left" alt="">
+                <img src="{{asset('img/right.png')}}" class="right" alt="">
+              </div>
+            </div>
+          @endfor
+          
+        </div>
+
+        <div class="filter-type">
+          <div class="select" onclick="select_filter_mean(this,'left')">แบบรวดเร็ว</div>
+          <div class="select" onclick="select_filter_mean(this,'right')">แบบละเอียด</div>
+          <div class="bg"></div>
+        </div>
+
+        <div class="box-select" style="display: none">
+          @for ($i = 0; $i < 20; $i++)
+            <div class="item" onclick="select_mean(this)">
+              <figure><img src="{{asset('img/awesome-bitcoin.png')}}" alt=""></figure>
+              <p>วาจา</p>
+            </div>
+          @endfor
+        </div>
+
+        <div class="box-select-detailed">
+          <div class="boxselect">
+            <select name="" id="" class="form-component select">
+              <option value="">อาชีพ การงาน</option>
+              <option value="">อาชีพ การงาน</option>
+              <option value="">อาชีพ การงาน</option>
+              <option value="">อาชีพ การงาน</option>
+              <option value="">อาชีพ การงาน</option>
+              <option value="">อาชีพ การงาน</option>
+            </select>
+          </div>
+
+          <div class="box">
+            @for ($i = 0; $i < 20; $i++)
+              <div class="item" onclick="select_mean(this)">
+                <figure><img src="{{asset('img/awesome-bitcoin.png')}}" alt=""></figure>
+                <p>วาจา</p>
+              </div>
+            @endfor
+          </div>
+        </div>
+      </div>
+      <div class="fortune-ber">
+        <p class="title">ทำนายหมายเลขที่ต้องการ</p>
+        <p>กรอกหมายเลขเบอร์ที่คุณต้องการ</p>
+
+        <div class="input-box">
+          <input type="number">
+          <input type="number">
+          <input type="number">
+          <div class="keed"></div>
+          <input type="number">
+          <input type="number">
+          <input type="number">
+          <div class="keed"></div>
+          <input type="number">
+          <input type="number">
+          <input type="number">
+          <input type="number">
+
+          <div class="palm">
+            <div class="left"><img src="{{asset('img/leaf.png')}}" alt=""></div>
+            <div class="right"><img src="{{asset('img/right.png')}}" alt=""></div>
+          </div>
+        </div>
+
+        <div class="button"><button class="form-component button bg">เริ่มทำนายเบอร์</button></div>
       </div>
     </div>
     <div class="confirm-search container">
@@ -1380,6 +1459,23 @@
       else{
         console.error('Missing parametor dir');
       }
+    }
+
+    function select_filter_mean(that,dir){
+      let element = that.closest('.filter-type').querySelector('.bg')
+      if(dir === "left"){
+        element.classList.remove('right')
+      }
+      else if(dir === "right"){
+        element.classList.add('right')
+      }
+      else{
+        console.error('Missing parametor dir');
+      }
+    }
+
+    function select_mean(that){
+      that.classList.toggle('active')
     }
 
     // ฟังก์ชั่นกดปุ่มเลื่อน package
