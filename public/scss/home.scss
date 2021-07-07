@@ -17,10 +17,16 @@
   .search-zone{
     background: $darkblue;
     border-radius: 10px;
-    width: 65%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 2em;
     margin-bottom: 2em;
     padding: .5em 1em;
+
+    @media screen and (min-width:$xl){
+      width: 65%;
+    }
 
     .search-head{
       display: flex;
@@ -47,6 +53,15 @@
           cursor: pointer;
           padding: .25em 0;
 
+          &:nth-child(2),&:nth-child(3){
+            display: none;
+
+            @media screen and (min-width:$xl){
+              display: block;
+            }
+          }
+          
+
           &.active{
             color: $sky;
             border-bottom: 2px solid $sky;
@@ -63,10 +78,31 @@
       }
 
       .right{
+        display: none;
+
+        @media screen and (min-width:$xl){
+          display: block;
+        }
         
         .manual{
           color: $gray;
           cursor: pointer;
+        }
+      }
+
+      .select-mobile{
+        display: flex;
+        align-items: center;
+        margin-bottom: .5em;
+
+        @media screen and (min-width:$xl){
+          display: none;
+        }
+
+        label{
+          margin-right: 10px;
+          color: $white;
+          font-size: .8em;
         }
       }
     }
@@ -84,7 +120,11 @@
         border-bottom: 1px solid $gray;
         padding: 1em 0;
         display: grid;
-        grid-template-columns: 44% 56%;
+        grid-template-columns: 100%;
+
+        @media screen and (min-width:$xl){
+          grid-template-columns: 44% 56%;
+        }
 
         .left{
           p{
@@ -116,7 +156,11 @@
               height: 35px;
               border: unset;
               text-align: center;
-              margin: 0 .25em;
+              margin: 0 .15em;
+
+              @media screen and (min-width:$xl){
+                margin: 0 .25em;
+              }
             }
 
             .keed{
@@ -128,6 +172,11 @@
 
           .random-ber{
             margin-left: 2em;
+            display: none;
+
+            @media screen and (min-width:$xl){
+              display: block;
+            }
 
             button{
               &:focus{
@@ -186,8 +235,12 @@
       .ber-cate{
         .right{
           .cate-select{
-            width: 350px;
+            width: 100%;
             position: relative;
+
+            @media screen and (min-width:$xl){
+              width: 350px;
+            }
 
             select{
               -webkit-appearance: none;
@@ -219,7 +272,11 @@
 
             .input-box{
               position: relative;
-              width: 125px;
+              width: 100px;
+
+              @media screen and (min-width:$xl){
+                width: 125px;
+              }
 
               &:after{
                 content: attr(data-cur);
@@ -228,6 +285,19 @@
                 right: 5px;
                 transform: translateY(-50%);
                 color: $white;
+                font-size: .6em;
+
+                @media screen and (min-width:$xl){
+                  font-size: 1em;
+                }
+              }
+
+              input{
+                font-size: .8em;
+
+                @media screen and (min-width:$xl){
+                  font-size: 1em;
+                }
               }
             }
 
@@ -242,7 +312,7 @@
           }
 
           .filter{
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: space-evenly;
             border: 1px solid $gray;
@@ -252,6 +322,10 @@
             background: $black;
             position: relative;
             margin-left: 2em;
+
+            @media screen and (min-width:$xl){
+              display: flex;
+            }
 
             .select-button{
               color: $white;
@@ -275,14 +349,32 @@
               }
             }
           }
+
+          .select-filter{
+            margin-left: 5px;
+            
+            @media screen and (min-width:$xl){
+              display: none;
+            }
+
+            select{
+              background: linear-gradient($sky,$purple);
+              color: $white;
+              font-size: .6em;
+            }
+          }
         }
       }
 
       .ber-sum{
         .right{
           .sum-select{
-            width: 350px;
+            width: 100%;
             position: relative;
+
+            @media screen and (min-width:$xl){
+              width: 350px;
+            }
 
             select{
               -webkit-appearance: none;
@@ -306,8 +398,12 @@
       .brand-ber{
         .right{
           .brand-select{
-            width: 350px;
+            width: 100%;
             position: relative;
+
+            @media screen and (min-width:$xl){
+              width: 350px;
+            }
 
             select{
               -webkit-appearance: none;
@@ -591,7 +687,11 @@
     }
 
     .fortune-ber{
-      padding: 2em;
+      padding: 1em 0;
+
+      @media screen and (min-width:$xl){
+        padding: 2em;
+      }
 
       .title{
         color: $white;
@@ -610,9 +710,13 @@
         justify-content: center;
         margin-top: 2em;
         position: relative;
-        width: 400px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
+
+        @media screen and (min-width:$xl){
+          width: 400px;
+        }
 
         input{
           width: 24px;
@@ -625,10 +729,20 @@
           background: $white;
           width: 10px;
           height: 3px;
-          margin: 0 10px;
+          margin: 0 5px;
+
+          @media screen and (min-width:$xl){
+            margin: 0 10px;
+          }
         }
 
         .palm{
+          display: none;
+
+          @media screen and (min-width:$xl){
+            display: block;
+          }
+
           .left,.right{
             position: absolute;
             top: 50%;
@@ -652,10 +766,16 @@
   .confirm-search{
     background: $darkblue;
     border-radius: 10px;
-    width: 65%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 2em;
     margin-bottom: 2em;
     padding: 1em;
+
+    @media screen and (min-width:$xl){
+      width: 65%;
+    }
 
     .group-button{
       display: flex;

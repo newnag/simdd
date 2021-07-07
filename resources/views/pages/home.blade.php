@@ -24,8 +24,17 @@
         <div class="right">
           <div class="manual">คู่มือการใช้งานค้นหาเบอร์ <i class="fas fa-book"></i></div>
         </div>
+        <div class="select-mobile">
+          <label for="">ค้นหา</label>
+          <select name="" id="" class="form-component select">
+            <option value="">เบอร์จากความหมาย</option>
+            <option value="">เบอร์จากความหมาย</option>
+            <option value="">เบอร์จากความหมาย</option>
+            <option value="">เบอร์จากความหมาย</option>
+          </select>
+        </div>
       </div>
-      <div class="search-box hidden">
+      <div class="search-box">
         <div class="ber-interest box-border">
           <div class="left">
             <p><i class="fas fa-sim-card"></i> ค้นหาเบอร์ที่คุณสนใจ</p>
@@ -122,6 +131,12 @@
               <div class="select-button" onclick="swif_filter(this,'left')">น้อยไปมาก</div>
               <div class="select-button" onclick="swif_filter(this,'right')">มากไปน้อย</div>
               <div class="bg"></div>
+            </div>
+            <div class="select-filter">
+              <select name="" id="" class="form-component select">
+                <option value="">มากไปน้อย</option>
+                <option value="">น้อยไปมาก</option>
+              </select>
             </div>
           </div>
         </div>
@@ -224,7 +239,7 @@
           </div>
         </div>
       </div>
-      <div class="fortune-ber">
+      <div class="fortune-ber hidden">
         <p class="title">ทำนายหมายเลขที่ต้องการ</p>
         <p>กรอกหมายเลขเบอร์ที่คุณต้องการ</p>
 

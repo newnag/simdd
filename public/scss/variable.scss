@@ -22,6 +22,6 @@ $wide: 1900px;
   font-size: $size;
 
   @media screen and (max-width: ($md)-1px) {
-      font-size: $size - 0.2em;
+    font-size: $size - 0.2em;
   }
 }
