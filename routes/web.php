@@ -26,3 +26,11 @@ Route::get('/allbit', function () {
     return view('pages.allbit');
 });
 
+Route::prefix('store')->group(function () {
+    Route::get('/', function () {
+        return view('pages.store.store');
+    });
+    Route::get('/instore', function () {
+        return view('pages.store.instore');
+    });
+});

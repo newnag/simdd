@@ -667,8 +667,28 @@ footer .footer .container .address .social a i {
 footer .footer .container .footer-menu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer .container .footer-menu {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    margin-bottom: unset;
+  }
+}
+
+footer .footer .container .footer-menu .list-menu {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer .container .footer-menu .list-menu {
+    border-bottom: unset;
+  }
 }
 
 footer .footer .container .footer-menu .list-menu li {

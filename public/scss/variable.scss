@@ -17,6 +17,8 @@ $xl: 1280px;
 $xxl: 1536px;
 $wide: 1900px;
 
+$coverImageHeight: 300px;
+
 // @function
 @mixin fontsize($size) {
   font-size: $size;
